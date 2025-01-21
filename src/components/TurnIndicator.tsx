@@ -1,16 +1,17 @@
-import X_IMAGE from '../assets/x.png'; // Replace with actual image path
+import X_IMAGE from '../assets/x.png';
 import O_IMAGE from '../assets/o.png';
+import { Player } from '../types/player';
 
 interface TurnIndicatorProps {
-  currentTurn: 'X' | 'O';
+  currentPlayer: Player;
 }
 
-const TurnIndicator = ({ currentTurn }: TurnIndicatorProps) => {
+const TurnIndicator = ({ currentPlayer }: TurnIndicatorProps) => {
   return (
     <div className="flex mt-4 gap-2 items-center">
       <img
-        src={currentTurn === 'X' ? X_IMAGE : O_IMAGE}
-        alt={currentTurn}
+        src={currentPlayer === 'X' ? X_IMAGE : O_IMAGE}
+        alt={currentPlayer}
         className="w-10 h-10"
       />
       <h1 className="text-2xl">Plays</h1>
