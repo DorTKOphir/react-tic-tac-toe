@@ -1,8 +1,6 @@
 import X_IMAGE from '../assets/x.png';
 import O_IMAGE from '../assets/o.png';
-import { Player } from '../types/player';
-
-type Cell = Player | null;
+import { Cell } from '../types/cell';
 
 interface BoardProps {
   board: Cell[][];
